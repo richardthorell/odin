@@ -25,28 +25,29 @@
 #include <cstddef>
 
 #if defined(__APPLE__) && __APPLE__
-#include <TargetConditionals.h>
-#if defined(__IPHONE__) || TARGET_OS_IPHONE
-#include <Availability.h>
-#else
-#include <AvailabilityMacros.h>
-#endif
+    #include <TargetConditionals.h>
+
+    #if defined(__IPHONE__) || TARGET_OS_IPHONE
+        #include <Availability.h>
+    #else
+        #include <AvailabilityMacros.h>
+    #endif
 #endif
 
 #if defined(_MSC_VER)
-#include <winapifamily.h>
+    #include <winapifamily.h>
 #endif
 
 #if defined(__EMSCRIPTEN__)
-#include <odin/platform/emscripten.h>
+    #include <odin/platform/emscripten.h>
 #elif defined(__ANDROID__)
-#include <odin/platform/android.h>
+    #include <odin/platform/android.h>
 #elif defined(__APPLE__) && __APPLE__
-#include <odin/platform/apple.h>
+    #include <odin/platform/apple.h>
 #elif defined(_WIN32) || defined(__WIN32__) || defined(__WINDOWS__)
-#include <odin/platform/windows.h>
+    #include <odin/platform/windows.h>
 #elif defined(linux) || defined(__linux) || defined(__linux__)
-#include <odin/platform/linux.h>
+    #include <odin/platform/linux.h>
 #else
-#error Unsupported platform
+    #error Unsupported platform
 #endif

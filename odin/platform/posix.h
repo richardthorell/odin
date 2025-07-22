@@ -25,10 +25,10 @@
 /**
  * @brief Indicates whether the target platform follows the POSIX standard.
  */
- #define ODIN_PLATFORM_POSIX 1
+#define ODIN_PLATFORM_POSIX 1
 
 
 /**
  * @brief Indicates whether POSIX threads (pthreads) are available on the platform.
  */
- #define ODIN_FEATURE_PTHREAD 1
+#define ODIN_FEATURE_PTHREAD 1

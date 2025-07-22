@@ -20,11 +20,11 @@
  * SOFTWARE.
  */
 
- #pragma once
+#pragma once
 
- #include <odin/platform/posix.h>
+#include <odin/platform/posix.h>
 
- /**
-  * @brief Indicates whether the target platform is Emscripten.
-  */
- #define ODIN_PLATFORM_EMSCRIPTEN 1
+/**
+ * @brief Indicates whether the target platform is Emscripten.
+ */
+#define ODIN_PLATFORM_EMSCRIPTEN 1

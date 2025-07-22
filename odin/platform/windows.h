@@ -26,3 +26,10 @@
  * @brief Indicates whether the target platform is Windows.
  */
 #define ODIN_PLATFORM_WINDOWS 1
+
+
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP)
+    #define ODIN_PLATFORM_WINDOWS_DESKTOP 1
+#elif WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP)
+    #define ODIN_PLATFORM_WINDOWS_UWP 1
+#endif
