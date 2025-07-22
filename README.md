@@ -25,6 +25,7 @@ It provides simple macros to conditionally enable functionality based on platfor
 #if ODIN_FEATURE_PTHREAD
     pthread_mutex_lock(&mutex);
 #endif
+```
 
 ## Supported Platforms
 
