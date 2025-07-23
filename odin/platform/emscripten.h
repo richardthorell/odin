@@ -25,6 +25,6 @@
 #include <odin/platform/posix.h>
 
 /**
- * @brief Indicates whether the target platform is Emscripten.
+ * @brief Indicates whether the target platform is WebAssembly.
  */
-#define ODIN_PLATFORM_EMSCRIPTEN 1
+#define ODIN_PLATFORM_WASM 1
