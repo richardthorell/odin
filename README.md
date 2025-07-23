@@ -8,8 +8,6 @@ It provides simple macros to conditionally enable functionality based on platfor
 - Unified macros for platform and feature detection
 - No runtime overhead
 - Minimal, header-only design
-- Easy integration into existing CMake-based projects
-- Designed for modern C++ development
 
 ## Example Usage
 

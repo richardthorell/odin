@@ -1,0 +1,8 @@
+{
+  "name": "odin",
+  "version-string": "1.0.0",
+  "description": "Header-only C++ feature test and platform config library.",
+  "homepage": "https://github.com/richardthorell/odin",
+  "license": "MIT",
+  "dependencies": []
+}
