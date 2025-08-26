@@ -38,6 +38,26 @@
     #include <winapifamily.h>
 #endif
 
+#if defined(_clang_)
+    #include <odin/compiler/clang.h>
+#elif defined(__GNUC__)
+    #include <odin/compiler/gcc.h>
+#elif defined(_MSC_VER)
+    #include <odin/compiler/msvc.h>
+#endif
+
+#if defined(__x86_64__) || defined(_M_X64) || defined(__amd64__)
+    #include <odin/arch/x64.h>
+#elif defined(__i386__) || defined(_M_IX86) || defined(__i686__)
+    #include <odin/arch/x86.h>
+#elif defined(__aarch64__) || defined(_M_ARM64) || defined(__arm64__)
+    #include <odin/arch/aarch64.h>
+#elif defined(__arm__) || defined(_M_ARM)
+    #include <odin/arch/arm.h>
+#elif defined(__riscv) || defined(__riscv__)
+    #include <odin/arch/riscv.h>
+#endif
+
 #if defined(__EMSCRIPTEN__)
     #include <odin/platform/emscripten.h>
 #elif defined(__ANDROID__)
