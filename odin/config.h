@@ -58,12 +58,24 @@
     #include <odin/arch/riscv.h>
 #endif
 
+#if defined(__ARM_NEON) || defined(__ARM_NEON__)
+    #include <odin/simd/neon.h>
+#elif defined(__SSE__)
+    #include <odin/simd/sse.h>
+#elif defined(__AVX__)
+    #include <odin/simd/avx.h>
+#endif
+
 #if defined(__EMSCRIPTEN__)
     #include <odin/platform/emscripten.h>
 #elif defined(__ANDROID__)
     #include <odin/platform/android.h>
 #elif defined(__APPLE__) && __APPLE__
     #include <odin/platform/apple.h>
+#elif defined(__ORBIS__) || defined(__PROSPERO__)
+    #include <odin/platform/playstation.h>
+#elif defined(_XBOX_ONE) || defined(__XBOX_ONE__) || defined(_DURANGO) || defined(_GAMING_XBOX)
+    #include <odin/platform/xbox.h>
 #elif defined(_WIN32) || defined(__WIN32__) || defined(__WINDOWS__)
     #include <odin/platform/windows.h>
 #elif defined(linux) || defined(__linux) || defined(__linux__)
