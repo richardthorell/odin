@@ -71,3 +71,13 @@
 #else
     #error Unsupported platform
 #endif
+
+#if defined(_LIBCPP_VERSION)
+    #include <odin/std/libc++.h>
+#elif defined(__GLIBCXX__) || defined(__GLIBCPP__)
+    #include <odin/std/libstdc++.h>
+#elif defined(_MSVC_STL_VERSION)
+    #include <odin/std/msvc.h>
+#else
+    #error Unsupported C++ standard library
+#endif
